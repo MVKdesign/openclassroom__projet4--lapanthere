@@ -21,7 +21,7 @@ a:hover {
 }
 
 a:focus {
-    border: 2px solid #F3976C;
+    border: 3px solid #333333;
 }
 
 #page-loading-blocs-notifaction {
@@ -31,6 +31,11 @@ a:focus {
     width: 100%;
     z-index: 100000;
     background: #FFFFFF url("img/pageload-spinner.gif") no-repeat center center;
+}
+
+blockquote {
+    border-left: none;
+    padding: 0;
 }
 
 .citation {
@@ -64,7 +69,7 @@ a:focus {
     flex-direction: row;
 }
 
-#navmenu {
+.navmenu {
     text-decoration: none;
     margin-left: 30px;
 }
@@ -107,6 +112,7 @@ h6 {
     z-index: 100;
     top: 50%;
     left: 50%;
+    margin-left: 1%;
     transform: translate(-50%,-50%);
 }
 
@@ -115,6 +121,7 @@ h6 {
     z-index: 100;
     top: 50%;
     left: 50%;
+    margin-left: 1%;
     transform: translate(-50%,-50%);
 }
 
@@ -827,7 +834,7 @@ h4 {
 
 .portfolio-thumb {
     margin-bottom: 24px;
-    max-width: 100%;
+    width: 100%;
 }
 
 .portfolio-row {
@@ -858,7 +865,7 @@ h4 {
 }
 
 .bgc-atomic-tangerine {
-    background-color: #F3976C;
+    background-color: #c27754;
 }
 
 .tc-white {
@@ -909,7 +916,7 @@ h4 {
 }
 
 .bg-presentation {
-    background-image: url("img/image-de-presentation.bmp");
+    background-image: url("img/image-de-presentation.jpg");
 }
 
 @media (max-width: 1024px) {
@@ -924,6 +931,9 @@ h4 {
         padding-left: 0;
         padding-right: 0;
     }
+    .blocbanner2 {
+        height: 600px;
+    }
 }
 
 @media (max-width: 992px) and (min-width: 768px) {
@@ -933,15 +943,18 @@ h4 {
     .nav-center.navbar .nav {
         max-width: 100%
     }
+    .blocbanner2 {
+        height: 750px;
+    }
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     .b-parallax {
         background-attachment: scroll;
     }
 }
 
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+@media only screen and (min-width: 1024px) and (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
     .b-parallax {
         background-attachment: scroll;
     }
@@ -959,10 +972,6 @@ h4 {
         overflow-x: hidden;
         position: relative;
     }
-    .bloc {
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
-    }
     .bloc-group,
     .bloc-group .bloc {
         display: block;
@@ -971,8 +980,6 @@ h4 {
     .bloc-fill-screen .fill-bloc-top-edge,
     .bloc-fill-screen .fill-bloc-bottom-edge {
         padding: 0 20px;
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
     }
 }
 
@@ -1112,12 +1119,33 @@ h4 {
         width: 180px;
         height: 320px;
     }
+    h2 {
+        font-size: 18px!important;
+    }
+    .blocbanner2 {
+        height: 700px;
+    }
+    .premierplan {
+        width: 80%;
+    }
 }
 
 @media (max-width: 400px) {
     .bloc {
         padding-left: 0;
         padding-right: 0;
+    }
+    .blocbanner2 {
+        height: 800px;
+    }
+    .voffset-lg {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 321px) {
+    .blocbanner2 {
+        height: 980px;
     }
 }
 
